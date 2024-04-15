@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="input-container">
+            <div class="input-boxes">
+                <label for="Day" id="day-label">Day</label>
+                <input type="number" OnClick="clickDay()" placeholder="DD" id="day" class="input-field" />
+                <div class="error" id="error-day" style="visibility: hidden;">Must be a valid day</div>
+            </div>
+            <div class="input-boxes">
+                <label for="Month" id="month-label">Month</label>
+                <input type="number" OnClick="clickMonth()" placeholder="MM" id="month" class="input-field" />
+                <div class="error" id="error-month" style="visibility: hidden;">Must be a valid month</div>
+            </div>
+            <div class="input-boxes">
+                <label for="year" id="year-label">Year</label>
+                <input type="number" OnClick="clickYear()" placeholder="YYYY" id="year" class="input-field" />
+                <div class="error" id="error-year" style="visibility: hidden;">Must be in the past</div>
+            </div>
+            <br style="clear: both;">
+        </div>
+        <div>
+            <hr class="solid">
+            <button OnClick="submitButton()"><img src="icon-arrow.svg" /></button>
+        </div>
+        <br style="clear: both;">
+        <div class="container">
+            <div class="output">
+                <p class="dynamic-output" id="output-year">--</p>
+                <p class="static-output">years</p>
+            </div>
+            <div class="output">
+                <p class="dynamic-output" id="output-month">--</p>
+                <p class="static-output">Months</p>
+            </div>
+            <div class="output">
+                <p class="dynamic-output" id="output-day">--</p>
+                <p class="static-output">Days</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
